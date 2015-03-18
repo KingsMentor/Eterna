@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Eterna</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="and">and</string>
+    <string name="eternal_name">Search Eterna</string>
+    <string name="email">Attach an email to this account</string>
+    <string name="phone">phone number</string>
+    <string name="my_eternals">found eternals</string>
+    <string name="user_hint">Eternal\'s Name</string>
+    <string name="country">(Ng)</string>
+    <string name="app_key">jbhjvngut6t47ygut63272dui774378778</string>
+    <string name="invite">Invite more of your friends you would want to keep in touch with forevre</string>
+    <string name="call">Call</string>
+    <string name="message">Message</string>
+    <string name="error_message">Unexpected Error Occurred</string>
+    <string name="contact">Add to Contact</string>
+    <string name="Continue">Continue</string>
+    <string name="claim_name">Claim Name</string>
+    <string name="action_share">Share</string>
+    <string name="next">Next</string>
+    <string name="request_message">Processing request. Please Wait</string>
+    <string name="misplace_phone"><u>Can\'t access your phone right Now ? Check your mail if you have attached an email to your account</u></string>
+    <string name="own_phone">Have a mobile number ?</string>
+    <string name="postal_reminder">Please include country code</string>
+    <string name="phone_empty_string">Phone number can not be empty</string>
+    <string name="pin_empty_string">Pin can not be empty</string>
+    <string name="name_empty_string">Name can not be empty</string>
+    <string name="resend_text">Have not received the pin yet ?</string>
+    <string name="resend_button_text">Resend Pin</string>
+    <string name="empty_search">Name field can not be empty</string>
+    <string name="notify">Notify these contact</string>
+    <string name="setings">General</string>
+    <string name="pref_include_me_summary">Display your contact when you search for your own eterna name</string>
+    <string name="pref_include_me">Include me in Search</string>
+    <string name="pref_search_contact_summary">Perform search on your contact list when entering a name</string>
+    <string name="pref_search_contact">Search my contact</string>
+    <string name="pref_notification_sound_summary">Play sound when notification is received </string>
+    <string name="pref_notification_sound">Notification Sound</string>
+    <string name="empty_contact_string">No contact on your phone book yet?</string>
+    <string name="empty_notification_string">You have not received any notification yet</string>
+    <string name="empty_contact_button_string">Create contact</string>
+    <string name="pin_verify">Verify Pin</string>
+    <string name="notification">View Notification</string>
+    <string name="update_string">Update Contact</string>
+
+
+</resources>

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:compat="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="eternal.com.led.eternal.Main.MainActivity">
+    <item
+        android:id="@id/notification"
+        android:title="@string/notification"
+        android:orderInCategory="99"
+        android:icon="@drawable/info"
+        compat:showAsAction="always" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        compat:showAsAction="ifRoom" />
+    <item
+        android:id="@id/action_share"
+        android:title="@string/action_share"
+        compat:showAsAction="always"
+        compat:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+</menu>

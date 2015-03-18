@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/option_call"
+        android:title="@string/call" />
+    <item
+        android:id="@id/option_message"
+        android:title="@string/message" />
+    <item
+        android:id="@id/option_add_to_contact"
+        android:title="@string/contact" />
+</menu>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tile">
+        <item>Welcome</item>
+        <item>Share</item>
+        <item>Simple Call</item>
+        <item>Connection</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Join the platform by claiming a global name, attaching alongside it, your reachable contact, anytime, anywhere</item>
+        <item>Share your claimed name (eternal) with friends on social media. No need to share your mobile number again. Just tell what you will be eternally known as</item>
+        <item>Call friends and loved one from any device with eternal. No need to memorise their number. Just use their eternal</item>
+        <item>Invite friends to join the platform, claim their name and make your staying connected easier</item>
+    </string-array>
+
+    <string-array name="country_names">
+        <item>Nigeria</item>
+        <item>Canada</item>
+        <item>Ghana</item>
+        <item>United States</item>
+
+
+    </string-array>
+
+    <string-array name="country_code">
+
+        <item>234</item>
+        <item>1</item>
+        <item>233</item>
+        <item>1</item>
+
+    </string-array>
+
+    <string-array name="spcial_code">
+        <item>621</item>
+        <item>460</item>
+        <item>620</item>
+        <item>310</item>
+
+    </string-array>
+
+    <string-array name="length">
+        <item>10</item>
+        <item>10</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+
+    <string-array name="ends">
+        <item>0</item>
+        <item>0,1</item>
+        <item>0,1</item>
+        <item>0</item>
+    </string-array>
+</resources>

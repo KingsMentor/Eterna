@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#fff"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="You are just a step away from globally claiming your name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:id="@id/name_field"
+        android:maxLength="@integer/max_length"
+        android:inputType="textPersonName"
+        android:hint="enter name"
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:layout_width="200.0dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login"
+        android:id="@id/continue_button"
+        android:text="@string/Continue" />
+
+    <TextView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="We will be checking to see if your name is available. Just be patient with us"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

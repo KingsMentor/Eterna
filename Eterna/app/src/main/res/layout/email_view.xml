@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_margin="2dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:id="@id/useremail"
+        android:text="@string/email"
+        android:background="@drawable/selectable_white"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:padding="@dimen/activity_horizontal_padding"
+        android:drawableRight="@drawable/gplus"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

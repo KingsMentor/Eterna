@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/setings"
+        android:key="pref_key_storage_settings">
+        <CheckBoxPreference
+            android:key="my_search"
+            android:summary="@string/pref_include_me_summary"
+            android:title="@string/pref_include_me"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="contact_search"
+            android:summary="@string/pref_search_contact_summary"
+            android:title="@string/pref_search_contact" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="play_sound"
+            android:summary="@string/pref_notification_sound_summary"
+            android:title="@string/pref_notification_sound" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <eternal.com.led.eternal.Main.CustomViews.CustomTextView
+        app:font="beyond"
+        android:id="@id/title_textview"
+        android:text="Welcome"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <eternal.com.led.eternal.Main.CustomViews.CustomTextView
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:font="robotolight"
+        android:id="@id/description_textview"
+        android:text="Welcome"
+        android:gravity="top|center_horizontal"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+</LinearLayout>

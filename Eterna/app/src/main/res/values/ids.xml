@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="apptitle_layout" type="id" />
+    <item name="home_slide" type="id" />
+    <item name="country_code" type="id" />
+    <item name="phone" type="id" />
+    <item name="search_listview" type="id" />
+    <item name="user_profile_image_view_search" type="id" />
+    <item name="user_name_text_view_search" type="id" />
+    <item name="user_phone_text_view_search" type="id" />
+    <item name="user_country_text_view_search" type="id" />
+    <item name="more_user_option" type="id" />
+    <item name="background_layout" type="id" />
+    <item name="footer_view_layout" type="id" />
+    <item name="profile_footer_avater" type="id" />
+    <item name="option_call" type="id" />
+    <item name="option_message" type="id" />
+    <item name="option_add_to_contact" type="id" />
+    <item name="title_textview" type="id" />
+    <item name="description_textview" type="id" />
+    <item name="view_pager_progress" type="id" />
+    <item name="continue_button" type="id" />
+    <item name="phone_field" type="id" />
+    <item name="pin_field" type="id" />
+    <item name="name_field" type="id" />
+    <item name="username" type="id" />
+    <item name="userphone" type="id" />
+    <item name="useremail" type="id" />
+    <item name="action_share" type="id" />
+    <item name="pro_pic_image" type="id" />
+    <item name="phone_access_textView" type="id"></item>
+    <item name="verify_button" type="id" />
+    <item name="resend_button" type="id" />
+    <item name="resend_textView" type="id" />
+    <item name="name_contact" type="id"/>
+    <item name="contact_list" type="id"/>
+    <item name="notification" type="id"/>
+    <item name="info_list" type="id"/>
+    <item name="update_contact" type="id"/>
+</resources>

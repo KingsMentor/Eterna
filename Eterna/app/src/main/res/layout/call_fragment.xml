@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_frame"
+    tools:context="eternal.com.led.eternal.Main.CallFragmentActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:weightSum="1"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@id/background_layout"
+            android:background="@color/bg_blue"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+
+            <EditText
+                android:textColor="#fff"
+                android:textSize="24dp"
+                android:id="@+id/searchName"
+                android:background="@android:color/transparent"
+                android:maxLength="@integer/max_length"
+                android:inputType="textWebEditText"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:minLines="1"
+                android:imeOptions="actionGo"
+                android:layout_margin="16dp"
+                android:maxLines="1"
+                android:textColorHint="#FFF"
+                android:hint="@string/eternal_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:divider="@null"
+            android:layout_weight="1"
+            android:id="@id/search_listview"
+            android:listSelector="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/empty_contact_list" />
+
+        <include layout="@layout/footer_view" />
+    </LinearLayout>
+</FrameLayout>

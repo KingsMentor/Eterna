@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ddd"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fadingEdge="none"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginTop="2dp"
+            android:fadingEdge="none"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:background="#ddd"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:background="@drawable/panel"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <eternal.com.led.eternal.Main.CustomViews.CircularImageView
+                    android:id="@id/pro_pic_image"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/ic_avater"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp" />
+
+                <eternal.com.led.eternal.Main.CustomViews.CustomTextView
+                    app:font="beyond"
+                    android:layout_marginBottom="5dp"
+                    android:id="@id/username"
+                    android:textColor="#000"
+                    android:paddingLeft="@dimen/activity_horizontal_padding"
+                    android:textSize="@dimen/name_size"
+                    android:typeface="monospace"
+                    android:text="Firstname Lastname"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <include layout="@layout/phone_view" />
+
+            <include layout="@layout/email_view" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

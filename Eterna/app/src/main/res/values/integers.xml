@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="max_length">10</integer>
+    <integer name="phone_length">13</integer>
+    <integer name="pin_length">7</integer>
+
+</resources>
