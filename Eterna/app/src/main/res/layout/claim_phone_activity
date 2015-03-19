@@ -12,6 +12,30 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
+    <Button
+
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:layout_width="200.0dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_transparent_gray"
+        android:id="@id/lost_contact"
+        android:text="@string/lost_contact" />
+
+    <eternal.com.led.eternal.Main.CustomViews.CustomTextView
+        android:id="@+id/seperator"
+        app:font="beyond"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_margin="15dp"
+        android:text="or"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <eternal.com.led.eternal.Main.CustomViews.CustomTextView
         android:id="@id/phone_access_textView"
         android:textColor="@color/black"

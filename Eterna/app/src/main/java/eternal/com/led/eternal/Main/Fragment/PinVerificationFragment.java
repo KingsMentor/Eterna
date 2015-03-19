@@ -75,12 +75,10 @@ public class PinVerificationFragment extends Fragment implements PinVerification
         verifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                animatingView = verifyButton;
                 if (pinEditText.getText().toString().isEmpty()) {
                     new CustomMessage(getActivity(), getString(R.string.pin_empty_string));
                 } else {
-                    changeViewEnable(false);
-                    animatingView = verifyButton;
-
                     new CustomMessage(getActivity(), getString(R.string.request_message));
                     if (new UserPreference(getActivity()).isPhoneChanging()) {
                         MessageDialog messageDialog = new MessageDialog().newInstance(PinVerificationFragment.this, new UserPreference(getActivity()).getPhoneNumber());
@@ -112,6 +110,7 @@ public class PinVerificationFragment extends Fragment implements PinVerification
     };
 
     public void callPinVerification() {
+        changeViewEnable(false);
         new Animation().TransitBg(getActivity(), animatingView);
         if (isNewUser)
             new PinVerificationHelper(getActivity(), this).execute(pinEditText.getText().toString(), "new");

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import eternal.com.led.eternal.Main.Animation;
 import eternal.com.led.eternal.Main.CustomMessage;
+import eternal.com.led.eternal.Main.CustomViews.CustomTextView;
 import eternal.com.led.eternal.Main.Interfaces.PhoneVerification;
 import eternal.com.led.eternal.Main.ServerHelper.PhoneNumberVerificationHelper;
 import eternal.com.led.eternal.Main.SharedPreference.UserPreference;
@@ -27,11 +28,35 @@ import eternal.com.led.eternal.R;
 public class PhoneVerificationFragment extends Fragment implements PhoneVerification {
     EditText phoneNumberEditText;
     Button continueButton;
+    Button lostContactButton;
+    CustomTextView textView;
+    CustomTextView orSeperatorTextView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.claim_phone_activity, container, false);
         phoneNumberEditText = (EditText) rootView.findViewById(R.id.phone_field);
+
+        textView = (CustomTextView) rootView.findViewById(R.id.phone_access_textView);
+        orSeperatorTextView = (CustomTextView) rootView.findViewById(R.id.seperator);
+        lostContactButton = (Button) rootView.findViewById(R.id.lost_contact);
+
+        if (new UserPreference(getActivity()).isPhoneChanging()) {
+            textView.setText(getString(R.string.change_phone));
+            lostContactButton.setVisibility(View.GONE);
+            orSeperatorTextView.setVisibility(View.GONE);
+        }
+
+
+
+        lostContactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new FragmentChanger(getFragmentManager(), new LostContactFragment(), true);
+            }
+        });
+
+
         continueButton = (Button) rootView.findViewById(R.id.continue_button);
         continueButton.findViewById(R.id.continue_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +95,7 @@ public class PhoneVerificationFragment extends Fragment implements PhoneVerifica
         new Animation().endAnimation(getActivity(), continueButton);
         userPreference.setPhoneNumber(phoneNumberEditText.getText().toString());
         ArrayList numberList = getArguments().getStringArrayList("numberList");
-        new FragmentChanger(getFragmentManager(), new PinVerificationFragment().newInstance(isNewUser, numberList), true);
+        new FragmentChanger(getFragmentManager(), new PinVerificationFragment().newInstance(isNewUser, numberList), false);
         changeViewEnable(true);
 
     }

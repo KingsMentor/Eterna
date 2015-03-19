@@ -37,4 +37,6 @@
     <item name="notification" type="id"/>
     <item name="info_list" type="id"/>
     <item name="update_contact" type="id"/>
+    <item name="email_field" type="id"/>
+    <item name="lost_contact" type="id"/>
 </resources>

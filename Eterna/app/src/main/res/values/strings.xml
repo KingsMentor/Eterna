@@ -8,7 +8,7 @@
     <string name="and">and</string>
     <string name="eternal_name">Search Eterna</string>
     <string name="email">Attach an email to this account</string>
-    <string name="phone">phone number</string>
+    <string name="phone">Phone Number</string>
     <string name="my_eternals">found eternals</string>
     <string name="user_hint">Eternal\'s Name</string>
     <string name="country">(Ng)</string>
@@ -24,7 +24,7 @@
     <string name="next">Next</string>
     <string name="request_message">Processing request. Please Wait</string>
     <string name="misplace_phone"><u>Can\'t access your phone right Now ? Check your mail if you have attached an email to your account</u></string>
-    <string name="own_phone">Have a mobile number ?</string>
+    <string name="own_phone">Want to enter Eterna ?</string>
     <string name="postal_reminder">Please include country code</string>
     <string name="phone_empty_string">Phone number can not be empty</string>
     <string name="pin_empty_string">Pin can not be empty</string>
@@ -46,6 +46,11 @@
     <string name="pin_verify">Verify Pin</string>
     <string name="notification">View Notification</string>
     <string name="update_string">Update Contact</string>
+    <string name="change_phone">Want to change your phone number? Enter new phone number below.</string>
+    <string name="lost_contact"><u>  Lost your contact ? </u></string>
+    <string name="contact_retriever_text"> Ensure to enter corresponding email and phone number details</string>
+    <string name="email_field"> Email</string>
+    <string name="user_not_exist">No User exist with the details provided.</string>
 
 
 </resources>

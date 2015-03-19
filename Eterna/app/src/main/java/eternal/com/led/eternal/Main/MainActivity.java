@@ -1,8 +1,10 @@
 package eternal.com.led.eternal.Main;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -38,7 +40,11 @@ public class MainActivity extends FragmentActivity {
         } else if (new UserPreference((this)).isPhoneChanging()) {
             setContentView(R.layout.main_splach_screen);
             new UserPreference(this).setPhoneChange(false);
-            new BitMapCache().addProfileImageBitmapToMemoryCache(this,null);
+
+            SharedPreferences shre = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor edit = shre.edit();
+            edit.putString("profileImage","");
+
             new FragmentChanger(getSupportFragmentManager(), new PhoneVerificationFragment().newInstance(null), false);
         } else {
             setContentView(R.layout.main_splach_screen);
@@ -84,20 +90,6 @@ public class MainActivity extends FragmentActivity {
     }
 
 
-    public Drawable getBackground(int position) {
-        switch (position) {
-            case 0:
-                return getResources().getDrawable(R.drawable.bkg1);
-            case 1:
-                return getResources().getDrawable(R.drawable.bkg2);
-            case 2:
-                return getResources().getDrawable(R.drawable.bkg3);
-            case 3:
-                return getResources().getDrawable(R.drawable.bkg4);
-            default:
-                return getResources().getDrawable(R.drawable.bkg1);
-        }
-    }
 
     public class FeaturePager extends FragmentPagerAdapter {
         public FeaturePager(FragmentManager fm) {

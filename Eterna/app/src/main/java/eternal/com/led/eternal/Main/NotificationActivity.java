@@ -20,6 +20,7 @@ import android.widget.PopupMenu;
 
 import eternal.com.led.eternal.Main.Adapter.InfoAdapter;
 import eternal.com.led.eternal.Main.DataBaseHelper.EternalContract;
+import eternal.com.led.eternal.Main.GCM_Handler.InfoNotificationManager;
 import eternal.com.led.eternal.Main.Models.UserModel;
 import eternal.com.led.eternal.Main.Providers.ContactedEternalProviders;
 import eternal.com.led.eternal.R;
@@ -34,6 +35,10 @@ public class NotificationActivity extends ActionBarActivity implements LoaderMan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (InfoNotificationManager.mNotificationManager != null) {
+            InfoNotificationManager.mNotificationManager.cancelAll();
+            InfoNotificationManager.position = 1;
+        }
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_USE_LOGO);
         getSupportActionBar().setIcon(R.drawable.ic_launcher);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ffffff")));

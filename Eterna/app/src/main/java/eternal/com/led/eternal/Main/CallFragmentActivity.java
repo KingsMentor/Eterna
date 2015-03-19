@@ -262,7 +262,8 @@ public class CallFragmentActivity extends Fragment implements NameSearchCallBack
         sendIntent.setType("text/plain");
         sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         sendIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Its Eterna");
-        sendIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I claimed " + new UserPreference(getActivity()).getName() + " on eterna. I urge you to claim yours to always stay connected. www.my-eternal.appspot.com");
+        sendIntent.putExtra(android.content.Intent.EXTRA_TEXT, "I claimed " + new UserPreference(getActivity()).getName() + " on eterna. I urge you to claim yours to always stay connected.");
+        sendIntent.putExtra(Intent.EXTRA_HTML_TEXT,"Join www.my-eternal.appspot.com");
         return sendIntent;
     }
 
