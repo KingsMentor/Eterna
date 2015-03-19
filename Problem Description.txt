@@ -1,0 +1,3 @@
+People often change their contact, misplace thier contact, or find themselves in situations where they are stranded, have a sundden change of contact and want to still keep in touh with their friends.
+
+Eterna is an app that let users claim a unique name that they prefer to be known as. Share the name with friends. Other users on eternal can search for them using that same name. So, when a user change a contact, the app does not only notify selected contact about the change, whosoever search for the user eterna(unique name on the platform), can also see the user new contact. This is a way of easier reaching your friends and loved ones by saving your the stress of memorising 12 - 15 digit number.
