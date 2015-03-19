@@ -46,7 +46,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.Connect
     private BroadcastReceiver proImageCacheReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            new CustomMessage(getActivity(), "got here");
             if (new BitMapCache().getProfileImageBitmapFromMemCache(getActivity()) != null) {
                 circularImageView.setImageDrawable(new BitMapCache().getProfileImageBitmapFromMemCache(getActivity()));
             }

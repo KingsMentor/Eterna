@@ -47,15 +47,15 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:maxLength="@integer/phone_length"
-        android:hint="@string/phone"
+        android:maxLength="3"
+        android:hint="234"
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
         android:padding="10dp"
-        android:id="@id/phone_field"
+        android:id="@+id/cc"
         android:gravity="center"
-        android:inputType="phone"
-        android:layout_width="200dp"
+        android:inputType="number"
+        android:layout_width="80dp"
         android:layout_height="wrap_content" />
 
     <eternal.com.led.eternal.Main.CustomViews.CustomTextView
@@ -66,6 +66,18 @@
         android:gravity="center"
         android:text="@string/postal_reminder"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:maxLength="@integer/phone_length"
+        android:hint="@string/phone"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:padding="10dp"
+        android:id="@id/phone_field"
+        android:gravity="center"
+        android:inputType="phone"
+        android:layout_width="200dp"
         android:layout_height="wrap_content" />
 
     <Button

@@ -27,6 +27,7 @@ import eternal.com.led.eternal.R;
 public class LostContactFragment extends Fragment implements RetrieveAccountCallback {
     EditText phoneEditText;
     EditText emailEditText;
+    EditText ccEditText;
     Button continueButton;
 
     @Override
@@ -35,17 +36,19 @@ public class LostContactFragment extends Fragment implements RetrieveAccountCall
 
         phoneEditText = (EditText) rootView.findViewById(R.id.phone_field);
         emailEditText = (EditText) rootView.findViewById(R.id.email_field);
+        ccEditText = (EditText) rootView.findViewById(R.id.cc);
         continueButton = (Button) rootView.findViewById(R.id.continue_button);
 
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (phoneEditText.getText().toString().trim().isEmpty() || emailEditText.getText().toString().trim().isEmpty())
-                    new CustomMessage(getActivity(), "Fields can not be empty");
+                if (phoneEditText.getText().toString().trim().isEmpty() || ccEditText.getText().toString().trim().isEmpty() || emailEditText.getText().toString().trim().isEmpty())
+                    new CustomMessage(getActivity(), getString(R.string.empty_field));
                 else {
                     changeEnable(false);
                     new Animation().TransitBg(getActivity(), continueButton);
-                    new ContactRetrieverHelper(LostContactFragment.this, getActivity()).execute(emailEditText.getText().toString().toString(), phoneEditText.getText().toString().trim());
+                    String phone = "+" + ccEditText.getText().toString().trim() + phoneEditText.getText().toString().trim();
+                    new ContactRetrieverHelper(LostContactFragment.this, getActivity()).execute(emailEditText.getText().toString().toString(), phone);
                 }
             }
         });
@@ -55,6 +58,7 @@ public class LostContactFragment extends Fragment implements RetrieveAccountCall
 
     public void changeEnable(boolean status) {
         phoneEditText.setEnabled(status);
+        ccEditText.setEnabled(status);
         emailEditText.setEnabled(status);
         continueButton.setEnabled(status);
     }

@@ -27,15 +27,18 @@ import eternal.com.led.eternal.R;
  */
 public class PhoneVerificationFragment extends Fragment implements PhoneVerification {
     EditText phoneNumberEditText;
+    EditText ccEditText;
     Button continueButton;
     Button lostContactButton;
     CustomTextView textView;
     CustomTextView orSeperatorTextView;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.claim_phone_activity, container, false);
         phoneNumberEditText = (EditText) rootView.findViewById(R.id.phone_field);
+        ccEditText = (EditText) rootView.findViewById(R.id.cc);
 
         textView = (CustomTextView) rootView.findViewById(R.id.phone_access_textView);
         orSeperatorTextView = (CustomTextView) rootView.findViewById(R.id.seperator);
@@ -46,7 +49,6 @@ public class PhoneVerificationFragment extends Fragment implements PhoneVerifica
             lostContactButton.setVisibility(View.GONE);
             orSeperatorTextView.setVisibility(View.GONE);
         }
-
 
 
         lostContactButton.setOnClickListener(new View.OnClickListener() {
@@ -61,13 +63,14 @@ public class PhoneVerificationFragment extends Fragment implements PhoneVerifica
         continueButton.findViewById(R.id.continue_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (phoneNumberEditText.getText().toString().trim().isEmpty()) {
-                    new CustomMessage(getActivity(), getString(R.string.phone_empty_string));
+                if (phoneNumberEditText.getText().toString().trim().isEmpty() || ccEditText.getText().toString().trim().isEmpty()) {
+                    new CustomMessage(getActivity(), getString(R.string.empty_field));
                 } else {
                     new CustomMessage(getActivity(), getString(R.string.request_message));
                     changeViewEnable(false);
                     new Animation().TransitBg(getActivity(), continueButton);
-                    new PhoneNumberVerificationHelper(getActivity(), PhoneVerificationFragment.this).execute(phoneNumberEditText.getText().toString());
+                    String phone = "+" + ccEditText.getText().toString().trim() + phoneNumberEditText.getText().toString().trim();
+                    new PhoneNumberVerificationHelper(getActivity(), PhoneVerificationFragment.this).execute(phone);
                 }
             }
         });
@@ -93,7 +96,8 @@ public class PhoneVerificationFragment extends Fragment implements PhoneVerifica
     public void onPhoneVerified(boolean isNewUser) {
         resetPreferences();
         new Animation().endAnimation(getActivity(), continueButton);
-        userPreference.setPhoneNumber(phoneNumberEditText.getText().toString());
+        String phone = "+" + ccEditText.getText().toString().trim() + phoneNumberEditText.getText().toString().trim();
+        userPreference.setPhoneNumber(phone);
         ArrayList numberList = getArguments().getStringArrayList("numberList");
         new FragmentChanger(getFragmentManager(), new PinVerificationFragment().newInstance(isNewUser, numberList), false);
         changeViewEnable(true);
@@ -109,6 +113,7 @@ public class PhoneVerificationFragment extends Fragment implements PhoneVerifica
 
     public void changeViewEnable(boolean status) {
         continueButton.setEnabled(status);
+        ccEditText.setEnabled(status);
         phoneNumberEditText.setEnabled(status);
     }
 

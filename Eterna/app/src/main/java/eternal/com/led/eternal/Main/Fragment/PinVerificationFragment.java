@@ -105,6 +105,7 @@ public class PinVerificationFragment extends Fragment implements PinVerification
         public void onReceive(Context context, Intent intent) {
             String pin = intent.getStringExtra("pin");
             pinEditText.setText("" + pin);
+            animatingView = verifyButton;
             callPinVerification();
         }
     };

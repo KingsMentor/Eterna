@@ -32,6 +32,7 @@
     <string name="resend_text">Have not received the pin yet ?</string>
     <string name="resend_button_text">Resend Pin</string>
     <string name="empty_search">Name field can not be empty</string>
+    <string name="empty_field">Fields on this screen can not be left empty</string>
     <string name="notify">Notify these contact</string>
     <string name="setings">General</string>
     <string name="pref_include_me_summary">Display your contact when you search for your own eterna name</string>
